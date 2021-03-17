@@ -1,0 +1,71 @@
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+   text-align: center;
+   margin-bottom: 0.5rem;
+
+}
+
+/*ADICIONAR NOVOS ELEMENTOS HTMLLLL */
+.verificarFeriados {
+    display: flex;
+    align-items: center;
+}
+
+.verificarFeriados h4 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    border-bottom: 1px solid greenyellow;
+}
+
+.add-feriado{
+    height: 2rem;
+    cursor:pointer;
+}
+
+.container-feriados {
+    display: flex;
+    padding: 0.5rem 0 0 0.5rem;
+    flex-direction: column;
+    justify-items: center;
+}
+
+#QntFeriado {
+    margin: 0.5rem 0.5rem 0rem 0rem;
+
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+
+#QntFeriado p{
+    font-size: 1.5rem;
+}
+
+#QntFeriado.Open {
+    opacity: 1;
+    visibility: visible;
+    transition: 2s;
+    padding: 0.5rem 0.5rem 1rem;
+    box-shadow: 11px 9px 19px 3px rgb(179 179 179 / 84%);
+    -webkit-box-shadow: 11px 9px 19px 3px rgb(179 179 179 / 84%);
+    -moz-box-shadow: 11px 9px 19px 3px rgba(179,179,179,0.84);
+    text-shadow: 4px 4px 2px rgb(0 0 0 / 22%);
+    position: relative;
+    top: 21rem;
+}
+
+img.arrow-bottom {
+    height: 2rem;
+}
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/Calendar.css">
+    <link rel="stylesheet" href="/styles/menu-hamburuger.css">
+    <link rel="stylesheet" href="/styles/FeriadoMes.css">
+    <link rel="stylesheet" href="/styles/ParcelasMes.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calendar">
+            <div class="month">
+                <input onclick="myFunction()" type="checkbox" id="menu-hamburguer">
+                <label for="menu-hamburguer">
+                    <div class="menu">
+                        <span class="hamburguer"></span>
+                    </div>
+                </label>
+                <i class="fas fa-angle-left prev"></i>
+                <div class="date">
+                    <h1></h1>
+                    <p></p>
+
+                </div>
+                <i class="fas fa-angle-right next"></i>
+            </div>
+
+            <div class="weekdays">
+                <div>Seg</div>
+                <div>Ter</div>
+                <div>Qua</div>
+                <div>Qui</div>
+                <div>Sex</div>
+                <div>Sab</div>
+                <div>Dom</div>
+            </div>
+
+            <div class="days"></div>
+
+            <div id="hora"></div>
+        </div>
+
+
+        <!-- PAGINA DE VALORES -->
+        <div id="values-​​month">
+
+                    <div class="header-mes">
+                        <p>PARCELAS<br>VALE TRANSPORTE<br></p>
+                        <div class="mes-header"></div>
+                    </div>
+            <div class="container-mes">
+                    <div class="container-feriados">
+                        <div class="verificarFeriados">
+                            <img onclick="addFeriado()" class="add-feriado" src="/imagens/add.png" alt="">
+                            <h4>Adicionar feriados ao mês</h4>
+                        </div>
+                        <div id="QntFeriado">
+                            <p>O valor será subtraido do valor final</p><br>
+                            <p>Insira a quantidade de feriados</p>
+                            <img src="/imagens/chevron.png" class="arrow-bottom" alt="">
+                            
+                            <input type="number" class="screen" placeholder="Exp: 2 feriados mês"> 
+                            <input onclick="myFunction()" type="button" id="btn" value="click">
+                        </div>
+                    </div>
+                <div id="allContainers">
+                    <div class="top">
+                         <h1>PRIMEIRA QUINZENA</h1>
+                        <div id="first-container">
+                            <div class="firstBloco sub-container">
+                            <img class="img-Money" src="/imagens/money1.png" alt="Imagem da moeda">
+                                <div class="moneyMes1">
+                                    <p><span></span></p>
+                                    <h6></h6>
+                                </div>
+                                <div class="ValueTransp">
+                                    <p>$ 7.60 vale transporte</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <h1>SEGUNDA QUINZENA</h1>
+                        <div id="second-container">
+                            <div class="secondBloco sub-container">
+                            <img class="img-Money" src="/imagens/money1.png" alt="Imagem da moeda">
+                                <div class="moneyMes2">
+                                    <p><span></span></p>
+                                    <h6></h6>
+                                </div>
+                                <div class="ValueTransp">
+                                <p>$ 7.60 vale transporte</p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="/javascripts/script.js"></script>
+    <script src="/javascripts/menu-hamburger.js"></script>
+</body>
+
+</html>

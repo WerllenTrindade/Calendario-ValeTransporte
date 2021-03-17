@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: #12121f;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.calendar {
+    width: 45rem;
+    height: 52rem;
+    background-color: #222227;
+    box-sizing: 0 0.5rem 3rem rgba(0,0,0,0.4);
+    margin-bottom: 3rem;
+    margin-top: 6rem;
+    position: relative;
+   
+}
+
+.month{
+    width: 100%;
+    height: 12rem;
+    background: linear-gradient(to right, rgb(22, 63, 22), rgb(23, 116, 23));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.5);
+
+    position: relative;
+}
+
+.month i {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.month h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.month p {
+    font-size: 1.6rem;
+}
+
+.weekdays{
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays div {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem; /* espaço entre */
+    width: calc(44.2rem /7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5)
+}
+
+.days{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+
+.days div{
+    font-size: 1.4rem;
+    margin: 0.3rem;
+    width: calc(40.2rem / 7);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0,0,0, 0.5);
+    transition: background-color 0.2;
+}
+
+.days div:hover:not(.today){
+    background-color: #262626;
+    border: 0.2rem solid #777;
+    cursor: pointer;
+}
+
+.prev-date,
+.next-date{
+    opacity: 0.5;
+}
+
+.today{
+    background: linear-gradient(rgb(22, 63, 22), rgb(23, 116, 23));
+    border-radius: 1rem;
+}
+
+#hora{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    position: absolute;
+    left: 16.5rem;
+    bottom: 13px;
+    color: #D3D3D3;
+}
+
+#hora:hover{
+    color:antiquewhite;
+}
+
+
+@media screen and (min-width: 960px) and (max-width: 1199px){
+    .container{
+        height: 100vh;
+        display: flex;
+        flex-direction: initial;
+    }
+    .calendar {
+        right: 1rem;
+        bottom: 1rem;
+    }
+    #values-​​month{
+        margin-top: 8rem;
+        width: 45rem;
+        margin-left: 1rem;
+        
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container{
+        height: 100vh;
+        display: flex;
+        flex-direction: initial;
+    }
+    .calendar {
+        right: 1rem;
+        bottom: 1rem;
+    }
+    #values-​​month{
+        margin-top: 8rem;
+        width: 45rem;
+        margin-left: 1rem;
+    }
+}
