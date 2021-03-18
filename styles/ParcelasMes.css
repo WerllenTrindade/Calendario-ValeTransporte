@@ -53,7 +53,7 @@
     justify-content: space-around;
     position: relative;
     bottom: 12.5rem;
-    margin-top: 0.5rem;
+    margin-top: 2.5rem;
 }
 
 .top {
@@ -70,7 +70,7 @@
 
 #first-container,
 #second-container {
-        background: linear-gradient(to right, rgb(45 210 45), rgb(43 183 43));
+    background: linear-gradient(to right, rgb(164 220 164), rgb(9 185 9));
     align-items: center;
     text-align: center;
     border-radius: 2rem;
@@ -127,5 +127,6 @@ img.img-Money {
     bottom: 1rem;
     font-size: 1.5rem;
     display: flex;
-    color: #0c09fb;
+    color: black;
+    font-weight: 700;
 }

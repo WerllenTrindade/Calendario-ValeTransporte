@@ -16,6 +16,8 @@ const months = [
 ];
 
 const renderCalendar = () => {
+
+  
   const monthDays = document.querySelector(".days");
 
   date.setDate(1);
@@ -81,6 +83,8 @@ const renderCalendar = () => {
     days += `<div class="next-date">${j}</div>`;
     monthDays.innerHTML = days;
   }
+
+
 
 };
 
@@ -214,8 +218,14 @@ document.querySelector(".prev").addEventListener("click", () => {
   renderCalendar();
 });
 
-CalcularValeTransporte();
+
+
+
 renderCalendar();
+CalcularValeTransporte();
+
+
+
 
 
 
