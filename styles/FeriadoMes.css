@@ -2,12 +2,23 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     
 }
-input[type=number] { 
-   -moz-appearance: textfield;
-   appearance: textfield;
-   text-align: center;
-   margin: 0.5rem 0;
+.screen{
+    -moz-appearance: textfield;
+    /* appearance: textfield; */
+    text-align: center;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 1px solid black;
+    border-bottom: 0.5px solid green;
+    width: 26rem;
+    outline: 0;
+    padding: 0.5rem;
+}
 
+.screen::placeholder{
+    color: red;
+    font-weight: 600;
 }
 
 /*ADICIONAR NOVOS ELEMENTOS HTMLLLL */
@@ -33,6 +44,7 @@ input[type=number] {
     padding: 0.5rem 0 0 0.5rem;
     flex-direction: column;
     justify-items: center;
+    height: 4rem;
 }
 
 #QntFeriado {
@@ -47,8 +59,17 @@ input[type=number] {
     visibility: hidden;
 }
 
-#QntFeriado p{
-    font-size: 1.5rem;
+#QntFeriado p {
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+#QntFeriado p:nth-child(4) {
+    color: rgb(0 0 0);
+    display: flex;
+    text-align: center;
+    opacity: 0.5;
+    margin-top: 1rem;
 }
 
 #QntFeriado.Open {
@@ -56,10 +77,6 @@ input[type=number] {
     visibility: visible;
     transition: 2s;
     padding: 0.5rem 0.5rem 1rem;
-    box-shadow: 11px 9px 19px 3px rgb(179 179 179 / 84%);
-    -webkit-box-shadow: 11px 9px 19px 3px rgb(179 179 179 / 84%);
-    -moz-box-shadow: 11px 9px 19px 3px rgba(179,179,179,0.84);
-    text-shadow: 4px 4px 2px rgb(0 0 0 / 22%);
     position: relative;
     top: 21rem;
 }

@@ -5,9 +5,6 @@ function myFunction(){
 }
 
 
-
-
-
 function addFeriado(){
      var element = document.querySelector('#QntFeriado')
      element.classList.toggle('Open')

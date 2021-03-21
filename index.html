@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/Calendar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" href="/styles/menu-hamburuger.css">
+    <link rel="stylesheet" href="/styles/MenuHamburuger.css">
     <link rel="stylesheet" href="/styles/FeriadoMes.css">
-    <link rel="stylesheet" href="/styles/ParcelasMes.css">
+    <link rel="stylesheet" href="/styles/SegundoBloco.css">
     <title>Document</title>
 </head>
 
@@ -27,24 +27,20 @@
                 <div class="date">
                     <h1></h1>
                     <p></p>
-
                 </div>
                 <i class="fas fa-angle-right next"></i>
             </div>
-
             <div class="weekdays">
+                <div>Dom</div>
                 <div>Seg</div>
                 <div>Ter</div>
                 <div>Qua</div>
                 <div>Qui</div>
                 <div>Sex</div>
                 <div>Sab</div>
-                <div>Dom</div>
             </div>
 
             <div class="days"></div>
-
-            <div id="hora"></div>
         </div>
 
 
@@ -62,12 +58,14 @@
                             <h4>Adicionar feriados ao mês</h4>
                         </div>
                         <div id="QntFeriado">
-                            <p>O valor será subtraido do valor final</p><br>
+                           
                             <p>Insira a quantidade de feriados</p>
                             
-                            <input type="number" class="screen" placeholder="Exp: 2 feriados mês"> 
+                            <input type="number" class="screen" placeholder="INSIRA O VALOR"> 
                             <input type="button" id="btn" value="click">
+                            <p>O valor da quantidade de feriados será descontado na segunda parcela.</p>
                         </div>
+                        
                     </div>
                 <div id="allContainers">
                     <div class="top">
