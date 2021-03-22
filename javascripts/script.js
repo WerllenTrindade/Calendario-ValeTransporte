@@ -68,10 +68,6 @@ const renderCalendar = () => {
   // h5 SubTitle
   document.querySelector(".date p").innerHTML = historicoData();
 
-
-
-  // Incrementar os dias responsivos no calendario
-
   let days = "";
 
   for (let x = firstDayIndex; x > 0; x--) {
@@ -159,24 +155,16 @@ const CalcularValeTransporte = () => { // mudar para função
   }
 
   // function para subtrair feriado
-  document.querySelector('#btn').addEventListener('click', e => {
+  const btn = document.querySelector('#btn')
+  btn.addEventListener('click', e => {
     e = document.querySelector('.screen').value
-    var QuinzeDias = primeirosQuinzeDias().length // obter valor 15
-    var DiasUteis = diasUteis().length; // obter valor 27
-    var valorValeTransp = 7.6;
 
-    valor = (DiasUteis - QuinzeDias) * valorValeTransp
+    const QuinzeDias = primeirosQuinzeDias().length // obter valor 15
+    const DiasUteis = diasUteis().length; // obter valor 27
+    const valor = ((DiasUteis - QuinzeDias) - e) * valorTransporte 
 
-    const Valorextraidabox =  valor - (e * 7.6) 
-
-    const formatReal = Valorextraidabox.toLocaleString("pt-BR", {
-        style: "currency",
-        currency: "BRL",
-      });
-
-      return document.querySelector('.moneyMes2').innerHTML = `<p><span>${formatReal}</p></span><h6>Valor total</h6>`
+    return document.querySelector('.moneyMes2').innerHTML = `<p><span class="addColor">${transformaValorEmMoeda(valor)}</p></span><h6>Valor total</h6>`
 })
-
 
 document.querySelector('.mes-header').innerHTML = `<p><strong>${exibirMesAtual()}</strong></p>`
 document.querySelector('.moneyMes1').innerHTML = calcularValorApagar()
