@@ -1,6 +1,6 @@
 const date = new Date();
 
-const valorTransporte = 7.6
+const valorTransporte = 7.6;
 
 const months = [
   "Janeiro",
@@ -17,29 +17,24 @@ const months = [
   "Dezembro",
 ];
 
-const exibirMesAtual = () =>  months[date.getMonth()]
+const exibirMesAtual = () => months[date.getMonth()];
 
 const renderCalendar = () => {
-
   date.setDate(1);
 
   const monthDays = document.querySelector(".days");
 
   //obter ultimo dia do mes
-  const lasDay = new Date(
-    date.getFullYear(), 
-    date.getMonth() + 1,
-     0).getDate();
+  const lasDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
-    // obtem Number 28
+  // obtem Number 28
   const prevLastDay = new Date(
     date.getFullYear(),
     date.getMonth(),
     0
   ).getDate();
 
-
-    // obtem o primeiro dia do mes return 1
+  // obtem o primeiro dia do mes return 1
   const firstDayIndex = date.getDay();
 
   // obtem mes em number
@@ -64,20 +59,22 @@ const renderCalendar = () => {
   }
 
   // h1 Header Fevereiro
-  document.querySelector(".date h1").innerHTML = exibirMesAtual()
+  document.querySelector(".date h1").innerHTML = exibirMesAtual();
   // h5 SubTitle
   document.querySelector(".date p").innerHTML = historicoData();
 
   let days = "";
 
   for (let x = firstDayIndex; x > 0; x--) {
-    days += `<div class="prev-date">${prevLastDay - x +1}</div>`;
+    days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
   }
 
   // Identificar e inserir o color no dia atual
   for (let i = 1; i <= lasDay; i++) {
-    if (i === new Date().getDate() &&
-      date.getMonth() === new Date().getMonth()) {
+    if (
+      i === new Date().getDate() &&
+      date.getMonth() === new Date().getMonth()
+    ) {
       days += `<div class="today">${i}</div>`;
     } else {
       days += `<div>${i}</div>`;
@@ -91,9 +88,9 @@ const renderCalendar = () => {
   }
 };
 
-const CalcularValeTransporte = () => { // mudar para função
+function CalcularValeTransporte () {
 
-    // Obter todos os dias do mes
+  // Obter todos os dias do mes
   function getDaysInMonth() {
     const anoAtual = date.getFullYear();
     const mesAtual = date.getMonth();
@@ -107,7 +104,7 @@ const CalcularValeTransporte = () => { // mudar para função
     }
     return arrdays;
   }
-  
+
   // deixar os domingos como false
   function eDomingo(date) {
     const diasDaSemana = new Array(7);
@@ -127,13 +124,16 @@ const CalcularValeTransporte = () => { // mudar para função
   const diasUteis = () => getDaysInMonth().filter((date) => !eDomingo(date));
 
   // obter os primeiros a data final dos primeiro 15 dias Uteis
-  const primeirosQuinzeDias = () => diasUteis().filter((item) => item < diasUteis()[15]);
+  const primeirosQuinzeDias = () =>
+    diasUteis().filter((item) => item < diasUteis()[15]);
 
   // Mascara para transf meoda em Real(R$)
-  const transformaValorEmMoeda = (valor) => valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  const transformaValorEmMoeda = (valor) =>
+    valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
   // Mascara para o bloco html
-  const renderValorTotalHTML = (valor) =>  `<p><span>${transformaValorEmMoeda(valor)}</span></p> <h6>Valor total</h6>`
+  const renderValorTotalHTML = (valor) =>
+    `<p><span>${transformaValorEmMoeda(valor)}</span></p> <h6>Valor total</h6>`;
 
   // Gerador de valores do primeiros 15 dias trabalhados
   // 01/mes contar 15 dias trabalhos.
@@ -146,33 +146,34 @@ const CalcularValeTransporte = () => { // mudar para função
 
   // Gerar segundo valor do vale
   function calcularORestoDoMes() {
-      const quinzeDias = primeirosQuinzeDias().length // obter valor 15
-      const totalDiasUteis = diasUteis().length; // obter valor 27
-      const valor = (totalDiasUteis - quinzeDias) * valorTransporte
+    const quinzeDias = primeirosQuinzeDias().length; // obter valor 15
+    const totalDiasUteis = diasUteis().length; // obter valor 27
+    const valor = (totalDiasUteis - quinzeDias) * valorTransporte;
 
-      return renderValorTotalHTML(valor)
-      
+    return renderValorTotalHTML(valor);
   }
 
-  // function para subtrair feriado
-  const btn = document.querySelector('#btn')
-  btn.addEventListener('click', e => {
-    e = document.querySelector('.screen').value
+  const btn = document.querySelector("#btn");
 
-    const QuinzeDias = primeirosQuinzeDias().length // obter valor 15
+  //subtrair feriado
+  btn.addEventListener("click", e => {
+    e = document.querySelector(".screen").value;
+
+    const QuinzeDias = primeirosQuinzeDias().length; // obter valor 15
     const DiasUteis = diasUteis().length; // obter valor 27
-    const valor = ((DiasUteis - QuinzeDias) - e) * valorTransporte 
+    const valor = (DiasUteis - QuinzeDias - e) * valorTransporte;
 
-    return document.querySelector('.moneyMes2').innerHTML = `<p><span class="addColor">${transformaValorEmMoeda(valor)}</p></span><h6>Valor total</h6>`
-})
+    return (document.querySelector(
+      ".moneyMes2"
+    ).innerHTML = `<p><span class="addColor">${transformaValorEmMoeda(
+      valor
+    )}</p></span ><h6>Valor total</h6>`);
+  });
 
-document.querySelector('.mes-header').innerHTML = `<p><strong>${exibirMesAtual()}</strong></p>`
-document.querySelector('.moneyMes1').innerHTML = calcularValorApagar()
-document.querySelector('.moneyMes2').innerHTML = calcularORestoDoMes()
-
-
+  document.querySelector(".mes-header").innerHTML = `<p><strong>${exibirMesAtual()}</strong></p>`;
+  document.querySelector(".moneyMes1").innerHTML = calcularValorApagar();
+  document.querySelector(".moneyMes2").innerHTML = calcularORestoDoMes();
 };
-
 
 document.querySelector(".prev").addEventListener("click", () => {
   date.setMonth(date.getMonth() - 1);
@@ -183,7 +184,6 @@ document.querySelector(".next").addEventListener("click", () => {
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 });
-
 
 renderCalendar();
 CalcularValeTransporte();

@@ -47,38 +47,36 @@
         <!-- PAGINA DE VALORES -->
         <div id="values-​​month">
 
-                    <div class="header-mes">
-                        <p>PARCELAS<br>VALE TRANSPORTE<br></p>
-                        <div class="mes-header"></div>
-                    </div>
+            <div class="header-mes">
+                <i class="fas fa-angle-left prev"></i>
+                <i class="fas fa-angle-right next"></i>
+                <p>PARCELAS<br>VALE TRANSPORTE<br></p>
+                <div class="mes-header"></div>
+            </div>
             <div class="container-mes">
-                    <div class="container-feriados">
-                        <div class="verificarFeriados">
-                            <img onclick="addFeriado()" class="add-feriado" src="/imagens/add.png" alt="">
-                            <h4>Adicionar feriados ao mês</h4>
-                        </div>
-                        <div id="QntFeriado">
-                           
-                            <p>Insira a quantidade de feriados</p>
-                            
-                            <input type="number" class="screen" placeholder="INSIRA O VALOR"> 
-                            <input type="button" id="btn" value="click">
-                            <p>O valor da quantidade de feriados será descontado no segundo pagamento</p>
-                        </div>
-                        
+                <div class="container-feriados">
+                    <div class="verificarFeriados">
+                        <img onclick="addFeriado()" class="add-feriado" src="/imagens/add.png" alt="">
+                        <h4>Adicionar feriados ao mês</h4>
                     </div>
+                    <div id="QntFeriado">
+                        <h5>A quantidade de dias, será descontado<br> no 2º pagamento</h5>
+
+                        <input type="number" class="screen" placeholder="INSIRA O VALOR">
+                        <input type="button" id="btn" value="Calcular">
+                        <p> $ 7.60 vale transporte</p>
+                    </div>
+
+                </div>
                 <div id="allContainers">
                     <div class="top">
-                         <h1>Primeiro Pagamento</h1>
+                        <h1>Primeiro Pagamento</h1>
                         <div id="first-container">
                             <div class="firstBloco sub-container">
-                            <img class="img-Money" src="/imagens/money2.png" alt="Imagem da moeda">
+                                <img class="img-Money" src="/imagens/money2.png" alt="Imagem da moeda">
                                 <div class="moneyMes1">
                                     <p><span></span></p>
                                     <h6></h6>
-                                </div>
-                                <div class="ValueTransp">
-                                    <p>$ 7.60 vale transporte</p>
                                 </div>
                             </div>
                         </div>
@@ -87,17 +85,14 @@
                         <h1>Segundo Pagamento</h1>
                         <div id="second-container">
                             <div class="secondBloco sub-container">
-                            <img class="img-Money" src="/imagens/money2.png" alt="Imagem da moeda">
+                                <img class="img-Money" src="/imagens/money2.png" alt="Imagem da moeda">
                                 <div class="moneyMes2">
                                     <p><span></span></p>
                                     <h6></h6>
                                 </div>
-                                <div class="ValueTransp">
-                                <p>$ 7.60 vale transporte</p>
-                                </div>
                             </div>
                         </div>
-                     </div>
+                    </div>
                 </div>
             </div>
         </div>

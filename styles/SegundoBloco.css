@@ -1,132 +1,119 @@
 /* block de valores*/
 #values-​​month {
-    height: 53rem;
-    width: 45rem;
-    position: relative;
-  
-    background: white;
-    color: black;
-  
-    margin-bottom: 7rem;
-  
-    opacity: 0;
-    visibility: hidden;
-    transition: 1s;
-  }
+  height: 53rem;
+  width: 45rem;
+  position: relative;
 
-  #values-​​month.onpage {
-    opacity: 1;
-    visibility: visible;
-    transition: 2s;
-  }
-  
+  background: white;
+  color: black;
+
+  margin-bottom: 7rem;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+}
+
+#values-​​month.onpage {
+  opacity: 1;
+  visibility: visible;
+  transition: 2s;
+}
 
 /* HEADER BLOCO PARCELAS */
-  .header-mes {
-    width: 100%;
-    background: linear-gradient(to right, rgb(22, 63, 22), rgb(23, 116, 23));
-    position: relative;
-    height: 12rem;
-  }
+.header-mes {
+  width: 100%;
+  background: linear-gradient(to right, rgb(22, 63, 22), rgb(23, 116, 23));
+  position: relative;
+  height: 12rem;
+}
 
-  .header-mes p {
-    display: flex;
-    font-size: 22px;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding-top: 0.5rem;
-    text-shadow: 0 0.3rem 0.5rem rgb(0 0 0 / 50%);
+.header-mes p {
+  display: flex;
+  font-size: 22px;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding-top: 0.5rem;
+  text-shadow: 0 0.3rem 0.5rem rgb(0 0 0 / 50%);
 }
 
 .header-mes p strong {
-    position: relative;
-    bottom: 1rem;
-    font-size: 4rem;
-    font-weight: 400;
-   }
-
+  position: relative;
+  bottom: 1rem;
+  font-size: 4rem;
+  font-weight: 400;
+}
 
 /*CONTEUDO DO CONTAINER PARCELAS*/
 #allContainers {
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    bottom: 2.5rem;
-    margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  bottom: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .top {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color:#201c33;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #201c33;
 }
 
-.top h1{
-    margin-bottom: 0.5rem;
+.top h1 {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #199233;
+  cursor: pointer;
 }
-
 
 #first-container,
 #second-container {
-    background: linear-gradient(to right, rgb(164 220 164), rgb(9 185 9));
-    align-items: center;
-    text-align: center;
-    border-radius: 2rem;
-    height: 15rem;
-    display: flex;
-    width: 20rem;
-    justify-content: center;
-    position: relative;
+  background: linear-gradient(to right, rgb(164 220 164), rgb(9 185 9));
+  align-items: center;
+  text-align: center;
+  border-radius: 2rem;
+  height: 15rem;
+  display: flex;
+  width: 20rem;
+  justify-content: center;
+  position: relative;
 }
 
 img.img-Money {
-    height: 3rem;
-    position: absolute;
-    left: 0.5rem;
-    top: 0.5rem;
+  height: 3rem;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
 }
 
 .moneyMes1,
 .moneyMes2 {
-    color: white;
-    font-size: 3rem;
-    position: relative;
+  color: white;
+  font-size: 3rem;
+  position: relative;
 }
 
-.moneyMes1 span, .moneyMes2 span {
-    font-weight: 300;
+.moneyMes1 span,
+.moneyMes2 span {
+  font-weight: 300;
 }
 
 .secondBloco.sub-container {
-    text-align: center;
+  text-align: center;
 }
 
-
-#btn{
-    background-image: linear-gradient( 
-        315deg
-         , #9e9e9e 0%, #7b7979 74%);
-    line-height: 22px;
-    padding: 1px 4rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%), 7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%);
-}
-
-.ValueTransp {
-    display: flex;
-    justify-content: center;
-}
-
-.ValueTransp p {
-    position: absolute;
-    bottom: 1rem;
-    font-size: 1.5rem;
-    display: flex;
-    color: black;
-    font-weight: 700;
+#btn {
+  background-image: linear-gradient(315deg, rgb(8 33 8) 0%, rgb(9 185 9) 74%);
+  line-height: 22px;
+  padding: 2px 5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: inset 2px 2px 2px 0px rgb(103 202 111 / 60%),
+    7px 7px 20px 0px rgb(63 134 63 / 70%),
+    4px 4px 5px 0px rgb(147 226 147 / 43%);
+  color: white;
+  font-size: 1.5rem;
 }
